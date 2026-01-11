@@ -13,7 +13,7 @@ def create_app():
 
     CORS(
         app,
-        resources={r"/api/*": {"origins": "http://localhost:5173"}},
+        resources={r"/api/*": {"origins": "https://zero-hunger-platform-peach.vercel.app/"}},
         supports_credentials=True
     )
     app.config.from_object(Config)
@@ -37,3 +37,4 @@ app = create_app()
 
 if __name__ == "__main__":
     app.run(debug=True)
+
